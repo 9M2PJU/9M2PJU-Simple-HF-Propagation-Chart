@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comprehensive HF Propagation Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Comprehensive HF Propagation Dashboard</h1>
+        <p>An aggregation of real-time data for amateur radio operators. Data sourced from various public services.</p>
+    </header>
+    <main class="dashboard-grid">
+        <div class="dashboard-item" id="muf-map">
+            <h3>MUF Map (KC2G)</h3>
+            <a href="https://prop.kc2g.com/" target="_blank"><img src="https://prop.kc2g.com/renders/current/mufd-normal-now.svg" alt="MUF Map"></a>
+        </div>
+        <div class="dashboard-item" id="ham-activity">
+            <h3>Live Ham Activity (DXView)</h3>
+            <iframe src="https://hf.dxview.org/"></iframe>
+        </div>
+        <div class="dashboard-item" id="d-rap-map">
+            <h3>D-Region Absorption (NOAA)</h3>
+            <a href="https://www.swpc.noaa.gov/products/d-region-absorption-predictions-d-rap" target="_blank"><img src="https://services.swpc.noaa.gov/images/animations/d-rap/global/d-rap/latest.png" alt="D-Region Absorption"></a>
+        </div>
+        <div class="dashboard-item" id="luf-map">
+            <h3>LUF Map (ASWFC)</h3>
+            <a href="https://www.sws.bom.gov.au/HF_Systems/6/2/2" target="_blank"><img src="https://www.sws.bom.gov.au/Images/HF%20Systems/Global%20HF/Fadeout%20Charts/xraycon.jpeg" alt="LUF Map"></a>
+        </div>
+        <div class="dashboard-item" id="nvis-map">
+            <h3>NVIS (foF2) Map (KC2G)</h3>
+            <a href="https://prop.kc2g.com/fof2/" target="_blank"><img src="https://prop.kc2g.com/renders/current/fof2-normal-now.svg" alt="NVIS Map"></a>
+        </div>
+        <div class="dashboard-item" id="t-index-map">
+            <h3>T-Index Map (ASWFC)</h3>
+            <a href="https://www.sws.bom.gov.au/HF_Systems/6/9" target="_blank"><img src="https://www.sws.bom.gov.au/Images/HF%20Systems/Global%20HF/T%20Index%20Map/West/tindex.png" alt="T-Index Map"></a>
+        </div>
+        <div class="dashboard-item wide" id="solar-banners">
+            <h3>Solar Conditions (N0NBH)</h3>
+            <div class="banner-container">
+                <a href="https://www.hamqsl.com/solar.html" target="_blank"><img src="https://www.hamqsl.com/solarmuf.php" alt="Sunlit Map"></a>
+                <a href="https://www.hamqsl.com/solar.html" target="_blank"><img src="https://www.hamqsl.com/solarbc.php" alt="Calculated HF Conditions"></a>
+                <a href="https://www.hamqsl.com/solar.html" target="_blank"><img src="https://www.hamqsl.com/solarbrief.php" alt="Solar Brief"></a>
+                <a href="https://www.hamqsl.com/solar.html" target="_blank"><img src="https://www.hamqsl.com/solarsun.php" alt="Solar Sun Banner"></a>
+            </div>
+        </div>
+        <div class="dashboard-item" id="hf-score">
+            <h3>HF Score (hfqso.com)</h3>
+            <div class="iframe-container-small">
+              <iframe src="https://hfqso.com/3bar-gauge.php" scrolling="no"></iframe>
+            </div>
+            <div class="iframe-container-large">
+              <iframe src="https://hfqso.com/score_chartD3.php" scrolling="no"></iframe>
+            </div>
+        </div>
+        <div class="dashboard-item" id="space-weather-overview">
+            <h3>Space Weather Overview (NOAA)</h3>
+            <a href="https://www.swpc.noaa.gov/products/space-weather-overview" target="_blank"><img src="https://services.swpc.noaa.gov/images/swx-overview-large.gif" alt="Space Weather Overview"></a>
+        </div>
+        <div class="dashboard-item" id="soho-images">
+            <h3>Live Sun Images (SOHO)</h3>
+            <div class="soho-gallery">
+                <a href="https://sohowww.nascom.nasa.gov/data/realtime/eit_171/1024/latest.jpg" target="_blank"><img src="https://sohowww.nascom.nasa.gov/data/realtime/eit_171/512/latest.jpg" alt="SOHO 17.1nm"></a>
+                <a href="https://sohowww.nascom.nasa.gov/data/realtime/eit_195/1024/latest.jpg" target="_blank"><img src="https://sohowww.nascom.nasa.gov/data/realtime/eit_195/512/latest.jpg" alt="SOHO 19.5nm"></a>
+                <a href="https://sohowww.nascom.nasa.gov/data/realtime/eit_284/1024/latest.jpg" target="_blank"><img src="https://sohowww.nascom.nasa.gov/data/realtime/eit_284/512/latest.jpg" alt="SOHO 28.4nm"></a>
+                <a href="https://sohowww.nascom.nasa.gov/data/realtime/eit_304/1024/latest.jpg" target="_blank"><img src="https://sohowww.nascom.nasa.gov/data/realtime/eit_304/512/latest.jpg" alt="SOHO 30.4nm"></a>
+            </div>
+        </div>
+        <div class="dashboard-item wide" id="animated-maps">
+            <h3>Animated Maps</h3>
+            <div class="animated-map-container">
+                <div class="animated-map-item">
+                    <h4>Animated MUF Map (HB9VQQ)</h4>
+                    <iframe src="https://muf.hb9vqq.ch/"></iframe>
+                </div>
+                <div class="animated-map-item">
+                    <h4>Animated TEC Map (HB9VQQ)</h4>
+                    <iframe src="https://tec.hb9vqq.ch/"></iframe>
+                </div>
+            </div>
+        </div>
+        <div class="dashboard-item wide" id="noaa-forecast">
+            <h3>3-Day Geomagnetic Forecast (NOAA)</h3>
+            <iframe src="https://services.swpc.noaa.gov/text/3-day-geomag-forecast.txt"></iframe>
+        </div>
+    </main>
+    <footer>
+        <p>This dashboard aggregates data from numerous sources. All content is the property of its respective owner. Please visit the original sources for more information.</p>
+        <p>Key sources include: <a href="https://www.qsl.net/4x4xm/HF-Propagation.htm" target="_blank">4x4xm.com</a>, <a href="https://prop.kc2g.com/" target="_blank">KC2G</a>, <a href="https://www.swpc.noaa.gov/" target="_blank">NOAA SWPC</a>, <a href="https://www.sws.bom.gov.au/" target="_blank">ASWFC</a>, <a href="https://hf.dxview.org/" target="_blank">DXView</a>, and others.</p>
+    </footer>
+</body>
+</html>
